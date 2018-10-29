@@ -1,0 +1,329 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\VC.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENUEX
+BEGIN
+    MENUITEM "Open",                        65535,MFT_STRING | MFT_RIGHTORDER | MFT_RIGHTJUSTIFY,MFS_ENABLED
+END
+
+IDR_MENU2 MENU
+BEGIN
+    MENUITEM "Open",                        ID_OPEN
+    POPUP "Display"
+    BEGIN
+        POPUP "Data"
+        BEGIN
+            MENUITEM "Load Data",                   IDM_LOAD_DATA
+            MENUITEM "Save Data",                   IDM_SAVE_DATA
+        END
+        POPUP "Lissajous"
+        BEGIN
+            MENUITEM "Plot Lissajous",              IDM_PLOT_LISSAJOUS
+            MENUITEM "Output Lissajous",            IDM_OUTPUT_LISSAJOUS
+        END
+    END
+    MENUITEM "Setting",                     ID_SETTING
+    MENUITEM "Help",                        IDM_HELP
+    MENUITEM "About",                       IDM_ABOUT
+END
+
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\mainpanel.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 242, 96
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,12,30,20,20
+    LTEXT           "Based on: DSO 2090 USB SDK",IDC_STATIC,49,55,105,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2018",IDC_STATIC,49,70,119,8
+    DEFPUSHBUTTON   "OK",IDOK,185,75,50,14,WS_GROUP
+    LTEXT           "DBD Plasma Power Monitor",IDC_STATIC,49,14,119,8,SS_NOPREFIX
+    LTEXT           "Author: Yiheng Li",IDC_STATIC,49,29,77,8,SS_NOPREFIX
+    LTEXT           "Maintainer: Yiheng Li",IDC_STATIC,131,29,97,8,SS_NOPREFIX
+    LTEXT           "Supervisor: Xin TU",IDC_STATIC,49,43,119,8,SS_NOPREFIX
+END
+
+IDD_VC_DIALOG DIALOGEX 0, 0, 807, 485
+STYLE DS_SETFONT | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_LEFTSCROLLBAR | WS_EX_APPWINDOW
+CAPTION "DBD Plasma Reactor Power Monitor"
+MENU IDR_MENU2
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Control Panel",IDC_CONTROLPANEL,25,255,336,111
+    GROUPBOX        "CH1",IDC_CH1PANEL,32,264,138,70,BS_CENTER
+    GROUPBOX        "CH2",IDC_CH2PANEL,218,264,137,70,BS_CENTER
+    LTEXT           "Channel Position",IDC_LABEL_CH1POSITION,37,279,67,9
+    EDITTEXT        IDC_EDIT_CH1POSITION,106,277,29,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDC_BTN_CH1POSITION_OK,139,277,25,13
+    LTEXT           "Trigger Position",IDC_LABEL_CH1TRIGGER,37,297,67,8
+    EDITTEXT        IDC_EDIT_CH1TRIGGER,106,295,29,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDC_BTN_CH1TRIGGER_OK,139,295,25,13
+    LTEXT           "Channel  Voltage",IDC_LABEL_CH1VOLTAGE,37,314,65,8
+    COMBOBOX        IDC_CBO_CH1VOLTAGE,106,313,38,96,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Channel Position",IDC_LABEL_CH2POSITION,223,279,67,9
+    EDITTEXT        IDC_EDIT_CH2POSITION,291,277,29,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDC_BTN_CH2POSITION_OK,324,277,25,13
+    LTEXT           "Trigger Position",IDC_LABEL_CH2TRIGGER,223,296,67,8
+    EDITTEXT        IDC_EDIT_CH2TRIGGER,291,294,29,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "OK",IDC_BTN_CH2TRIGGER_OK,324,294,25,13,WS_DISABLED
+    LTEXT           "Channel  Voltage",IDC_LABEL_CH2VOLTAGE,223,314,67,8
+    COMBOBOX        IDC_CBO_CH2VOLTAGE,291,312,38,100,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Trigger Source",IDC_LABEL_TRIGGERSOURCE,39,341,56,8
+    COMBOBOX        IDC_CBO_TRIGGERSOURCE,98,339,37,59,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Trigger Mode",IDC_LABEL_TRIGGERMODE,151,341,49,9
+    COMBOBOX        IDC_CBO_TRIGGERMODE,202,339,41,47,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "TIMEBASE",IDC_LABEL_TIMEBASE,275,341,32,9
+    COMBOBOX        IDC_CBO_TIMEBASE,309,339,37,91,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "AUTOSET",IDC_BTN_AUTOSET,174,268,39,23
+    PUSHBUTTON      "Start",IDC_BTN_START,174,298,40,15
+    PUSHBUTTON      "Stop",IDC_BTN_STOP,174,318,40,15
+    CONTROL         "",IDC_MAINPANEL,"Static",SS_BLACKRECT,25,7,336,240,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_SUBPANEL,"Static",SS_BLACKRECT,409,7,387,239,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    GROUPBOX        "Power Monitoring Panel",IDC_STATIC,580,409,167,68
+    GROUPBOX        "Data panel",IDC_STATIC,25,372,335,76
+    LTEXT           "Current Power(W):",IDC_STATIC,29,385,72,8,SS_CENTERIMAGE
+    LTEXT           "Cycles Used (CH2):",IDC_STATIC,159,372,53,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_POWER,122,383,28,12,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_BORDER
+    LTEXT           "Uc Peak Voltage(V):",IDC_STATIC,29,415,84,8
+    EDITTEXT        IDC_EDIT_VOLTAGE,122,415,25,12,ES_READONLY | ES_NUMBER | NOT WS_BORDER
+    CONTROL         "On",IDC_RADIO_ON,"Button",BS_AUTORADIOBUTTON,682,454,25,10
+    CONTROL         "Off",IDC_RADIO_OFF,"Button",BS_AUTORADIOBUTTON,716,454,25,10
+    LTEXT           "Real Time Monitoring:",IDC_STATIC,588,454,70,8
+    LTEXT           "Value of Capacitance:",IDC_STATIC,588,430,84,8
+    EDITTEXT        IDC_EDIT_C,680,429,32,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_C_UNIT,716,429,28,49,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_CYCLE,211,369,28,12,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_VISIBLE | NOT WS_BORDER
+    LTEXT           "Uapp Peak Votage(V):",IDC_STATIC,29,431,91,8
+    EDITTEXT        IDC_EDIT_VOLTAGE2,122,431,27,12,ES_READONLY | ES_NUMBER | NOT WS_BORDER
+    GROUPBOX        "Plot Control Panel",IDC_STATIC,408,409,167,68
+    LTEXT           "X-axis (kV)",IDC_STATIC,414,423,53,8
+    EDITTEXT        IDC_EDIT_XRANGE,471,421,41,12,ES_AUTOHSCROLL
+    LTEXT           "Y-axis (uC)",IDC_STATIC,414,442,54,8
+    EDITTEXT        IDC_EDIT_YRANGE,471,439,41,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Apply",IDC_BUTTON_APPLYRANGE,521,417,50,53
+    LTEXT           "Frequency:",IDC_STATIC,29,399,65,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_FREQUENCY,122,398,28,12,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT_SPAN,471,457,41,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Striction<<",IDC_BUTTON1,25,455,336,22
+    CONTROL         "",IDC_SEPARATOR,"Static",SS_BLACKFRAME | SS_SUNKEN,387,13,1,472
+    LTEXT           "Uapp peak to peak Votage(V):",IDC_STATIC,173,431,113,8
+    EDITTEXT        IDC_EDIT_VOLTAGE3,301,433,55,12,ES_READONLY | ES_NUMBER | NOT WS_BORDER
+    LTEXT           "Uc Peak to Peak Votage(V):",IDC_STATIC,173,416,107,8
+    EDITTEXT        IDC_EDIT_VOLTAGE4,301,417,55,15,ES_READONLY | ES_NUMBER | NOT WS_BORDER
+    LTEXT           "Energy For One Cycle(J):",IDC_STATIC,173,383,107,8
+    EDITTEXT        IDC_EDIT_VOLTAGE5,301,383,55,15,ES_READONLY | ES_NUMBER | NOT WS_BORDER
+    LTEXT           "Smooth times",IDC_STATIC,414,461,54,8
+    CONTROL         "",IDC_SUBPANEL2,"Static",SS_BLACKRECT,409,253,389,114,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    CONTROL         "Slider5",IDC_SLIDER5,"msctls_trackbar32",TBS_VERT | TBS_NOTICKS | WS_TABSTOP,391,38,17,187
+    CONTROL         "List1",Power_list,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,410,372,388,33
+    LTEXT           "Calculation Period(S):",IDC_STATIC,174,401,89,8,SS_CENTERIMAGE
+    EDITTEXT        Power_hz,301,400,18,14,ES_AUTOHSCROLL
+END
+
+IDD_HELPBOX DIALOG 0, 0, 246, 118
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Help"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "I GOT IT",IDOK,7,97,232,14
+    LTEXT           "1. CH1 is for low voltage; CH2 is for high voltage",IDC_STATIC,7,8,201,8,SS_CENTERIMAGE
+    LTEXT           "2. Click 'AUTOSET' before starting monitering",IDC_STATIC,7,22,181,8,SS_CENTERIMAGE
+    CONTROL         "3. Set a correct 'TIMEBAS' to allow enough cycles",IDC_STATIC,
+                    "Static",SS_LEFTNOWORDWRAP | SS_CENTERIMAGE | WS_GROUP,7,36,197,8
+    CONTROL         "to be used to calculate the power",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | SS_CENTERIMAGE | WS_GROUP,16,50,133,8
+    CONTROL         "4. Files should be in the same folder as the .EXE file",IDC_STATIC,
+                    "Static",SS_LEFTNOWORDWRAP | SS_CENTERIMAGE | WS_GROUP,7,64,217,8
+    CONTROL         "5. Increase smooth times to make the plot smooth",IDC_STATIC,
+                    "Static",SS_LEFTNOWORDWRAP | SS_CENTERIMAGE | WS_GROUP,7,78,193,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "VC MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "VC"
+            VALUE "LegalCopyright", "Copyright (C) 2007"
+            VALUE "OriginalFilename", "VC.EXE"
+            VALUE "ProductName", "VC Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 89
+    END
+
+    IDD_HELPBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About..."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\VC.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
